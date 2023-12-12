@@ -1,0 +1,708 @@
+// Couleurs  utilisées - Déclarations des variables
+$couleur_primaire: #e3eff5;
+
+$couleur_secondaire: #fff;
+
+$couleur_tertiaire: #000;
+
+$couleur_sombre1: #272323;
+
+$couleur_sombre2: #444242;
+
+$couleur_des_icones: rgb(151, 148, 148);
+
+$couleur_bleu: rgb(39, 23, 127);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  transition: 0.8s ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Style de la barre de navigation
+header {
+  overflow: hidden;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+div.navigation {
+  background-color: $couleur_secondaire;
+  position: fixed;
+  padding-right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 6000;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    border-top: 1px solid $couleur_des_icones;
+    height: 1.75rem;
+    background: $couleur_secondaire;
+    width: 100%;
+    z-index: 7000;
+    box-shadow: 0.3rem 0.3rem 0.3rem $couleur_des_icones;
+  }
+
+  .barre_d_icones {
+    background-color: $couleur_primaire;
+    width: 100vw;
+    height: 2.7em;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .icone_accueil {
+      font-size: 1.6rem;
+      font-weight: 700;
+      font-family: Simple Thread;
+      height: 100%;
+      color: $couleur_tertiaire;
+      background-color: $couleur_secondaire;
+
+      .icone_accueil_logo {
+        padding: 0.3em;
+        margin: 5px 10px;
+      }
+    }
+  }
+}
+
+.barre_d_icones nav {
+  height: 100%;
+}
+
+.barre_d_icones .icones_d_options {
+  display: flex;
+  color: $couleur_des_icones;
+  padding-top: 0.2rem;
+  padding-left: 2.2rem;
+  padding-right: 3rem;
+  margin-right: 0;
+  margin-top: 0rem;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.4 ease;
+  gap: 2rem;
+
+  .icone_centrale {
+    border-left: solid $couleur_des_icones 1px;
+    padding-top: 0.2rem;
+    padding-left: 0.92rem;
+    padding-right: -0.62rem;
+    margin-right: -0.62rem;
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: 1.6em;
+    margin-right: -10px;
+  }
+}
+
+.icones_d_options li a {
+  color: $couleur_des_icones;
+
+  &:hover {
+    color: $couleur_bleu;
+  }
+}
+
+.favoris {
+  padding-top: 0.2em;
+}
+
+.barre_d_icones .icones_d_options li {
+  color: $couleur_des_icones;
+  transition: color 0.45s ease-in-out;
+}
+
+.barre_d_icones .icones_d_options li img {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+// .barre_d_icones .icones_d_options li:hover {
+//   color: #fff;
+//   font-weight: bold;
+// }
+
+li {
+  list-style: none;
+}
+
+.barre_d_icones .menu_hamburger {
+  color: $couleur_des_icones;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.barre_d_options {
+  width: 100%;
+  height: 3.5rem;
+  margin: 0.44rem 0.44rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+}
+
+.option_creation {
+  position: relative;
+  text-align: center;
+  margin: 0.31rem 1.25rem;
+  cursor: pointer;
+}
+
+.bordure_option_creation {
+  height: 3rem;
+  display: inline;
+  border: 0.05rem solid $couleur_des_icones;
+}
+
+div span {
+  display: block;
+}
+
+.icone_creation {
+  color: $couleur_secondaire;
+  background-color: $couleur_bleu;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.3rem;
+  border-radius: 3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+
+  &:hover {
+    color: $couleur_bleu;
+    background-color: $couleur_secondaire;
+    border: solid $couleur_bleu 0.1rem;
+  }
+}
+
+.barre_de_recherche {
+  position: relative;
+  width: 14rem;
+  margin: 0.3rem 1.5rem;
+
+  label {
+    position: relative;
+    width: 100%;
+
+    input {
+      height: 2rem;
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+      font-style: italic;
+      outline: none;
+      border: 1px solid $couleur_bleu;
+      background-color: $couleur_secondaire;
+      border-radius: 0.5rem;
+
+      &:focus {
+        border: 1px solid $couleur_des_icones;
+      }
+    }
+  }
+}
+
+.barre_de_recherche label .icone_de_recherche {
+  position: absolute;
+  top: -0.3rem;
+  right: 0rem;
+  bottom: 0rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: $couleur_secondaire;
+  padding: 0.3rem 0.4rem;
+  background-color: $couleur_bleu;
+  cursor: pointer;
+}
+
+// Bouton light/dark mode
+.mode {
+  display: flex;
+  padding-right: 4rem;
+  align-items: center;
+  height: 100%;
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 3.25rem;
+    height: 1.88rem;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $couleur_des_icones;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.38rem;
+    width: 1.38rem;
+    left: 0.15rem;
+    bottom: 0.25rem;
+    background-color: $couleur_secondaire;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: $couleur_bleu;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 0.063rem $couleur_bleu;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 2.13rem;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+// Responsivité de la seconde section de la barre de navigation
+@media (max-width: 1228px) {
+  .mode {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 413px) {
+  .barre_d_options {
+    margin: 0.44rem 0.01rem;
+  }
+
+  .barre_de_recherche {
+    position: relative;
+    width: 12rem;
+    margin: 0.3rem 1rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .option_creation {
+    margin: 0.31rem 0.65rem;
+  }
+
+  .barre_d_options {
+    margin: 0.44rem 0.01rem;
+  }
+
+  .barre_de_recherche {
+    position: relative;
+    width: 9rem;
+    margin: 0.3rem 0.5rem;
+  }
+}
+
+// Barre déroulante
+.barre_deroulante {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 3.75rem;
+  height: 0;
+  width: 18.75rem;
+  background: $couleur_primaire;
+  backdrop-filter: blur(0.94rem);
+  border-bottom-left-radius: 0.94rem;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 8000;
+}
+
+.barre_deroulante.open {
+  height: 17.5rem;
+}
+
+.barre_deroulante nav ul li {
+  color: $couleur_des_icones;
+  padding: 0.7rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: color 0.45s ease-in-out;
+
+  span {
+    margin-right: 0.75rem;
+  }
+}
+
+.icones_secondaires {
+  &::before {
+    content: " ";
+    position: absolute;
+    border-top: 1px solid $couleur_des_icones;
+    margin-top: 2rem;
+    width: 80%;
+    z-index: 9000;
+    box-shadow: 1px 1px 1px $couleur_primaire;
+  }
+}
+
+// .barre_deroulante ul li a:hover {
+//   color: #c52159;
+//   font-weight: bold;
+// }
+
+.icone_hamburger {
+  color: $couleur_des_icones;
+  margin-right: 1rem;
+}
+
+@media (max-width: 992px) {
+  .barre_d_icones .icones_d_options,
+  .barre_d_icones .action_btn {
+    display: none;
+  }
+
+  .barre_d_icones .menu_hamburger,
+  .barre_deroulante {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .barre_deroulante {
+    top: 2.5rem;
+    width: 100vw;
+  }
+}
+
+// Style de la partie principale
+
+main {
+  width: 100vw;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.cartes {
+  justify-content: center;
+  top: 6rem;
+  margin: 0;
+  width: 100%;
+  padding: 20px 0px;
+  background-size: 100%;
+  font-size: 0.8rem;
+  float: left;
+  position: relative;
+  background-color: $couleur_primaire;
+}
+
+.grille_des_cartes {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+  grid-gap: 20px;
+}
+
+.carte {
+  background: $couleur_secondaire;
+  position: relative;
+  width: 100%;
+  height: 21rem;
+  border-radius: 0.5rem;
+  display: inline-grid;
+  grid-template-columns: auto;
+  cursor: pointer;
+  box-shadow: 0 0.34rem 1rem $couleur_des_icones;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 3rem;
+  }
+}
+
+.section_de_carte {
+  padding: 0rem;
+}
+
+.entete_carte {
+  margin: 0.5rem 0rem;
+
+  p {
+    color: $couleur_tertiaire;
+
+    span {
+      display: inline;
+      margin: 0rem 0.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.informations {
+  top: 9rem;
+  color: #000;
+  position: absolute;
+  padding: 0.5rem 0.4rem;
+  width: 100%;
+
+  .titre {
+    font-weight: bold;
+    padding: 0.75rem 0rem;
+  }
+
+  .description {
+    padding: 0.75rem 0rem;
+    text-align: justify;
+  }
+}
+
+.infos {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+
+  p span {
+    font-weight: bolder;
+    margin-bottom: -0.8rem;
+  }
+
+  .date_modif {
+    text-align: left;
+  }
+
+  .application {
+    text-align: right;
+  }
+}
+
+.options_de_fin {
+  padding: 0.7rem;
+  text-align: center;
+  color: $couleur_bleu;
+  margin-top: 0.4rem;
+
+  span {
+    display: inline;
+    padding: 0rem 0.5rem;
+  }
+}
+
+// Responsivité des cartes
+@media (max-width: 1228px) {
+  .mode {
+    padding-top: 1rem;
+  }
+
+  .options_de_fin {
+    padding: 0.7rem;
+    text-align: center;
+    color: $couleur_bleu;
+    margin-top: 0.4rem;
+
+    span {
+      display: inline;
+      padding: 0rem 0.3rem;
+    }
+  }
+}
+
+.options_de_fin span:hover {
+  color: $couleur_sombre1;
+}
+
+@media (max-width: 1025px) {
+  .grille_des_cartes {
+    grid-template-columns: repeat(2, 4fr);
+    position: relative;
+    width: 100%;
+    padding: 50px 20px;
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .carte {
+    background: $couleur_secondaire;
+    position: relative;
+    color: $couleur_secondaire;
+    width: 100%;
+    height: 21rem;
+    border-radius: 0.5rem;
+    display: inline-grid;
+    grid-template-columns: auto;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (max-width: 755px) {
+  .grille_des_cartes {
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 8fr);
+  }
+
+  .carte img {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grille_des_cartes {
+    grid-gap: 10px;
+  }
+}
+
+// Style du dark mode
+.dark {
+  .navigation {
+    background-color: $couleur_sombre1;
+    color: $couleur_secondaire;
+
+    .barre_d_icones {
+      background-color: $couleur_sombre2;
+
+      .icone_accueil {
+        color: $couleur_secondaire;
+        background-color: $couleur_sombre1;
+      }
+
+      .icones_d_options {
+        li a {
+          color: $couleur_primaire;
+
+          &:hover {
+            color: $couleur_bleu;
+          }
+        }
+      }
+    }
+    &::after {
+      border-top: 0.063rem solid $couleur_secondaire;
+      height: 1.75rem;
+      background: $couleur_sombre1;
+      box-shadow: 0 0.12rem 0.3rem $couleur_des_icones;
+    }
+  }
+
+  .barre_de_recherche {
+    label {
+      input {
+        border: 1px solid $couleur_secondaire;
+        background-color: $couleur_sombre1;
+        &:focus {
+          border: 1px solid $couleur_bleu;
+        }
+      }
+      .icone_de_recherche {
+        color: $couleur_bleu;
+        background-color: $couleur_secondaire;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .icone_creation {
+    background-color: $couleur_secondaire;
+    color: $couleur_bleu;
+
+    &:hover {
+      background-color: $couleur_bleu;
+      color: $couleur_secondaire;
+    }
+  }
+
+  .barre_deroulante {
+    background: $couleur_sombre2;
+
+    nav ul li {
+      color: $couleur_primaire;
+    }
+  }
+
+  .message_infructueux {
+    color: $couleur_secondaire;
+  }
+
+  .cartes {
+    background-color: $couleur_sombre2;
+  }
+
+  .carte {
+    background: $couleur_sombre1;
+    color: $couleur_secondaire;
+    box-shadow: 0 0.2rem 0.5rem $couleur_des_icones;
+
+    .section_de_carte {
+      .entete_carte p {
+        color: $couleur_des_icones;
+      }
+
+      .informations {
+        p {
+          color: $couleur_des_icones;
+        }
+
+        .options_de_fin {
+          color: #338fb9;
+
+          span {
+            &:hover {
+              color: $couleur_secondaire;
+            }
+          }
+        }
+      }
+    }
+  }
+}
