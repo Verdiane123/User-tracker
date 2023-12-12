@@ -8,6 +8,7 @@ const router = createRouter({
         //     name: 'helloworld',
         //     component: () => import('@/components/HelloWorld.vue'),
         // },
+        //URL de la page
         {
             path: '/',
             name: 'homepage',
