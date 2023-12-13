@@ -182,12 +182,13 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 export default {
   data() {
     return {
-      darkMode: true,
+      darkMode: false,
       searchQuery: "",
       isDropdownOpen: false,
       // Cartes affichées de manière statique
       cards: [
         {
+          id: "00efdgfFG323345CCGHfhcghfgh1",
           src: require("../assets/images/monde.png"),
           alt: "Carte du monde",
           title: "Afrique",
@@ -198,6 +199,7 @@ export default {
           application: "Mon application"
       },
       {
+          id: "00efdgfFG345657gfgGHfhcghfgh2",
           src: require("../assets/images/lyon.png"),
           alt: "Carte de Lyon",
           title: "Lyon",
@@ -208,6 +210,7 @@ export default {
           application: "Mon application"
       },
       {
+          id: "00efdgfFG323345CCGHfhgjhvGHC573",
           src: require("../assets/images/lyon.png"),
           alt: "Carte de Lyon",
           title: "Lyon",
@@ -218,6 +221,7 @@ export default {
           application: "Mon application"
       },
         {
+          id: "00efdgfFGFGHJ67ggh566578JHBKghj64",
           src: require("../assets/images/lyon.png"),
           alt: "Carte de Bron",
           title: "Bron",
@@ -232,6 +236,7 @@ export default {
       // Cartes affichées de manière dynamique avec le bouton +
       randomCards: [
       {
+        id: "00efdgfFG323345fghjnFGH5676ghfgh5",
         src: require("../assets/images/monde.png"),
         alt: "Carte d'Australie",
         title: "Australie",
@@ -242,6 +247,7 @@ export default {
         application: "Mon application"
       },
       {
+        id: "00efdgHVGGyfgvhb67865345CCGHfhcghfgh6",
         src: require("../assets/images/lyon.png"),
         alt: "Carte de Vénissieux",
         title: "Vénissieux",
@@ -252,6 +258,7 @@ export default {
         application: "Mon application"
       },
       {
+        id: "00efdgfFG323345CCGHfhcghfgh7",
         src: require("../assets/images/monde.png"),
         alt: "Carte de France",
         title: "France",
@@ -262,6 +269,7 @@ export default {
         application: "Mon application"
       },
         {
+          id: "00efdgfFG3233fdghjhEZFD465ghfgh8",
           src: require("../assets/images/monde.png"),
           alt: "Carte de France",
           title: "France",
@@ -300,7 +308,7 @@ export default {
       const randomIndex = Math.floor(Math.random() * this.randomCards.length);
       const randomCard = this.randomCards[randomIndex];
 
-    // Ajoute des cartes 
+    // Ajout des cartes 
       this.cards.push(randomCard);
     },
 

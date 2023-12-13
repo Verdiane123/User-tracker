@@ -15,7 +15,7 @@ import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
 import '@/assets/styles/css/style.css';
 
-// Appel des icones importés
+// Appel des icones importées
 library.add(fas, faHome, faBars, faCog, faFutbol, faEllipsisH)
 
 library.add(faUserSecret)
